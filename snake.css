@@ -17,19 +17,7 @@
     justify-content: center;
   
 }
-/* 
-.snakeZone{
-    display:grid;
-    margin-top:13vh;
-    border-radius: 15px;
-    background: linear-gradient(grey,   #e3536a);    box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
-    grid-template-columns: repeat(25,1fr);
-    grid-template-rows: repeat( 21,1fr);
-    width:98vmin;
-   height:75vh;
-   border:2px solid rgb(16, 1, 0); 
-   
-}*/
+
 
 .botton{
     display:none;
@@ -91,7 +79,7 @@ header{
 
 }
 #slideUp{
-    top:75vh;
+    top:65vh;
     left:47vw;
    
    }
@@ -118,7 +106,7 @@ h2{
      
    }
    img{
-    width:45px;
+    width:35px;
    }
    .botton:hover{
     scale:1.1;
@@ -142,22 +130,22 @@ h2{
    } */
    
    #slideDown{
-    top:95vh;
+    top:85vh;
     left:47vw;
    }
    #slideLeft{
-    top:90vh;
+    top:75vh;
     left:38vw;
    }
    #slideRight{
-    top:90vh;
+    top:75vh;
     left:56vw;
    }
 
 
    #snakeZone{
     display:grid;
-    margin-top:13vh;
+    margin-top:5vh;
     border-radius: 15px;
     /* background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); */
     /* background: linear-gradient(grey,   #e3536a);  */
