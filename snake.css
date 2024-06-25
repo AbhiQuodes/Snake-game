@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+
+}
+
+.container{
+    position: fixed;
+    padding:10px;
+    width:100vw;
+    min-height:100vh;
+    display:flex;
+    touch-action: none;
+    background:linear-gradient( 45deg,rgb(15 16 12), rgb(99 90 86));
+    /* align-items:center; */
+    justify-content: center;
+  
+}
+/* 
+.snakeZone{
+    display:grid;
+    margin-top:13vh;
+    border-radius: 15px;
+    background: linear-gradient(grey,   #e3536a);    box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
+    grid-template-columns: repeat(25,1fr);
+    grid-template-rows: repeat( 21,1fr);
+    width:98vmin;
+   height:75vh;
+   border:2px solid rgb(16, 1, 0); 
+   
+}*/
+
+.botton{
+    display:none;
+}
+
+#box{
+    /* background-color: yellow; */
+    grid-row: 2;
+    grid-column:6;
+}
+.snakeHead{
+  /* background: radial-gradient(rgb(255, 42, 0),black); */
+  background-image:url("SnakeHead.png"); 
+  background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+  scale:1.5;
+  z-index: 13;
+  /* border-radius:cover; */
+  border-radius:10px;
+ 
+  /* border: 1px solid white; */
+
+  
+
+}
+.snakeBody{
+    background-color: rgb(66, 26, 9);
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px yellow inset;
+    border: 1px solid green;
+}
+.food{
+    border-radius:10px;
+    background-image: url("https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV8zMF9hX2RyYXdpbmdfb2ZfYV9idXJnZXJfaW5fdGhlX3N0eWxlX29mX2JvbGRfb181NWI2OWI5ZC02YjQ2LTRkZDctYWFlMy0wMDkzOTUwODc5ZDdfMS5wbmc.png");
+    /* background-color: #fff; */
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    /* background:linear-gradient(#cb980c,rgb(225, 17, 17)); */
+    scale:1.1;
+    box-shadow: 1px 1px 3px rgb(43, 6, 6);
+    
+}
+header{
+    
+    width:100vw;
+    height: 6vh;
+    top:0;
+    left:0;
+    z-index: 10;
+ 
+    border-bottom: 2px solid white;
+   backdrop-filter: blur(20px);
+   text-shadow: 5px 1px 1.5px rgb(21, 21, 18);;
+    /* border:2px solid white; */
+    position:fixed;
+    /* border-bottom: 2px solid white; */
+
+}
+#slideUp{
+    top:75vh;
+    left:47vw;
+   
+   }
+h2{
+    display:inline-block;
+   font-size:5vh;
+    margin:5px;
+    color:rgb(152, 152, 26);
+    font-family:'Courier New', Courier, monospace    ;
+}
+
+ @media  (max-width: 600px) {
+ .botton{
+    position:       fixed;
+    display:inline-block;
+     border:none;
+      background: transparent;
+     min-width:45px;
+     min-height:45px;
+      border-radius:20px;
+      /* background-color: #e7f03e; */
+      top:85vh;
+      left:47vw;
+     
+   }
+   img{
+    width:45px;
+   }
+   .botton:hover{
+    scale:1.1;
+   }
+   #up{
+      transform: rotate(-90deg);
+   }
+   #down{
+    transform: rotate(90deg);
+ }
+ #left{
+ transform: rotate(180deg);
+ }
+
+
+
+   /* #slideUp{
+    top:75vh;
+    left:47vw;
+   
+   } */
+   
+   #slideDown{
+    top:95vh;
+    left:47vw;
+   }
+   #slideLeft{
+    top:90vh;
+    left:38vw;
+   }
+   #slideRight{
+    top:90vh;
+    left:56vw;
+   }
+
+
+   #snakeZone{
+    display:grid;
+    margin-top:13vh;
+    border-radius: 15px;
+    /* background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); */
+    /* background: linear-gradient(grey,   #e3536a);  */
+    /* background-image: url("https://img.lovepik.com/photo/48010/8637.jpg_wh860.jpg"); */
+    /* error 
+    background-image: url("https://t3.ftcdn.net/jpg/04/95/83/48/360_F_495834896_84gYm1ukldpg66tdCnGHmxi6pgrVlCTw.jpg"); */
+    /* background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover; */
+    background: linear-gradient(grey,   #e3536a);    box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat( 21,1fr);
+    width:98vmin;
+   height:70vh;
+   border:2px solid rgb(16, 1, 0);
+}
+
+
+#startBtn{
+    position:absolute;
+    right:10px;
+    top:0px;
+    width:40px;
+    height:40px;
+    background: linear-gradient(rgb(0, 255, 72) ,rgb(210, 143, 8));
+    color:rgb(239, 5, 5);
+    border:none;
+    border-radius:12px;
+    box-shadow:-2px 3px 5px black;
+    
+}
+   
+
+   
+}
+
+
+@media (min-width:601px)
+{
+ 
+#snakeZone{
+    display:grid;
+    margin-top:13vh;
+    border-radius: 15px;
+    /* background-image: url("https://img.lovepik.com/photo/48010/8637.jpg_wh860.jpg"); */
+    /*error
+     background-image: url("https://t3.ftcdn.net/jpg/04/95/83/48/360_F_495834896_84gYm1ukldpg66tdCnGHmxi6pgrVlCTw.jpg"); */
+    /* background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); */
+    background: linear-gradient(grey,   #e3536a); 
+    /* background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover; */
+       box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
+    grid-template-columns: repeat(25,1fr);
+    grid-template-rows: repeat( 21,1fr);
+    width:98vmin;
+   height:75vh;
+   border:2px solid rgb(16, 1, 0);
+}
+
+
+#startBtn{
+    display:none;
+}
+}
