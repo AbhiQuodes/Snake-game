@@ -19,11 +19,11 @@ const DirectionChange=new Audio('DirectionChange.aac');
 const gameOver=new Audio('gameOver.aac');
 
 //chages in the position of food for resposieness on mobile.
-console.log('yes',window.innerWidth);
+// console.log('yes',window.innerWidth);
 if(window.innerWidth <=600)
     {
         
-        alert('yes');
+        // alert('yes');
         snakeArray=[ {x:8 ,y:15}];
         let food={ x: Math.round( 1+(15-1)*Math.random()) ,  y: Math.round( 1+(21-1)*Math.random())};
     }
@@ -268,7 +268,7 @@ rightBtn.addEventListener('click',()=>{
 
 
 document.addEventListener('touchstart',(e)=>{
-    alert("Touch start");
+    // alert("Touch start");
     touch=e.touches[0];
     startX=touch.clientX;
     startY=touch.clientY;
@@ -279,7 +279,7 @@ document.addEventListener('touchstart',(e)=>{
 
 
     document.addEventListener('touchmove',(e)=>{
-    alert("Touch Move");
+    // alert("Touch Move");
     touch=e.touches[0];
     DistX=startX-touch.clientX;
     DistY=startY-touch.clientY;
@@ -290,7 +290,7 @@ document.addEventListener('touchstart',(e)=>{
 
 
     document.addEventListener('touchend',(e)=>{
-    alert("Touch End");
+    // alert("Touch End");
   if(Math.abs(DistX)> Math.abs(DistY))
     {
         if(DistX>0)
