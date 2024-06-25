@@ -49,7 +49,7 @@ function checkCollision(snakeArray){
         }
         if(window.innerWidth <=600)
             {
-                if( snakeArray[0].x<= 0 ||   snakeArray[0].x >= 17 ||snakeArray[0].y <= 0 ||snakeArray[0].y >= 22)
+                if( snakeArray[0].x< 0 ||   snakeArray[0].x > 17 ||snakeArray[0].y < 0 ||snakeArray[0].y >= 22)
                     {
                                         
                         return true;
@@ -313,14 +313,14 @@ document.addEventListener('touchstart',(e)=>{
         if(DistX>0)
             {
                 // console.log("drag Right");
-                inputDirection={ x:-1, y:0 };
+                inputDirection={ x:1, y:0 };
                 DirectionChange.play();
             }
 
            else
                 {
                     // console.log("drag Left");
-                    inputDirection={ x:1, y:0 };
+                    inputDirection={ x:-1, y:0 };
                     DirectionChange.play();
                 }
 
