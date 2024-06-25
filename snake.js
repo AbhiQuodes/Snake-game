@@ -47,15 +47,32 @@ function checkCollision(snakeArray){
                 }
 
         }
-             if( snakeArray[0].x< 0 ||   snakeArray[0].x > 26 ||snakeArray[0].y < 0 ||snakeArray[0].y > 22)
-                {
-                                    
-                    return true;
-                }
-
-                else{
-                    return false;
-                }
+        if(window.innerWidth <=600)
+            {
+                if( snakeArray[0].x<= 0 ||   snakeArray[0].x >= 17 ||snakeArray[0].y <= 0 ||snakeArray[0].y >= 22)
+                    {
+                                        
+                        return true;
+                    }
+    
+                    else{
+                        return false;
+                    }
+           
+            }
+            else
+            {
+                if( snakeArray[0].x< 0 ||   snakeArray[0].x > 26 ||snakeArray[0].y < 0 ||snakeArray[0].y > 22)
+                    {
+                                        
+                        return true;
+                    }
+    
+                    else{
+                        return false;
+                    }
+            }
+          
         
 }
 
