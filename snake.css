@@ -79,7 +79,7 @@ header{
 
 }
 #slideUp{
-    top:70vh;
+    top:71vh;
     left:47vw;
    
    }
@@ -101,8 +101,8 @@ h2{
      min-height:45px;
       border-radius:20px;
       /* background-color: #e7f03e; */
-      top:73vh;
-      left:47vw;
+      top:78vh;
+      left:45vw;
      
    }
    img{
@@ -130,16 +130,16 @@ h2{
    } */
    
    #slideDown{
-    top:83vh;
-    left:47vw;
+    top:88vh;
+    left:45vw;
    }
    #slideLeft{
-    top:78vh;
-    left:38vw;
+    top:83vh;
+    left:33vw;
    }
    #slideRight{
-    top:78vh;
-    left:56vw;
+    top:83vh;
+    left:57vw;
    }
 
 
