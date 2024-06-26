@@ -79,7 +79,7 @@ header{
 
 }
 #slideUp{
-    top:65vh;
+    top:70vh;
     left:47vw;
    
    }
@@ -101,12 +101,12 @@ h2{
      min-height:45px;
       border-radius:20px;
       /* background-color: #e7f03e; */
-      top:85vh;
+      top:73vh;
       left:47vw;
      
    }
    img{
-    width:35px;
+    width:40px;
    }
    .botton:hover{
     scale:1.1;
@@ -130,22 +130,22 @@ h2{
    } */
    
    #slideDown{
-    top:85vh;
+    top:83vh;
     left:47vw;
    }
    #slideLeft{
-    top:75vh;
+    top:78vh;
     left:38vw;
    }
    #slideRight{
-    top:75vh;
+    top:78vh;
     left:56vw;
    }
 
 
    #snakeZone{
     display:grid;
-    margin-top:5vh;
+    margin-top:7.5vh;
     border-radius: 15px;
     /* background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); */
     /* background: linear-gradient(grey,   #e3536a);  */
