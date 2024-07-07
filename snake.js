@@ -160,21 +160,21 @@ document.addEventListener('keydown',(event)=>{
 
 upBtn.addEventListener('click',()=>{
     inputDirection={ x:0, y:-1 };
-    ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
+    ( lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
     DirectionChange.play();
 
 });
 
 downBtn.addEventListener('click',()=>{
     inputDirection={ x:0, y:1 };
-    ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
+    ( lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
     DirectionChange.play();
 
 });
 
 leftBtn.addEventListener('click',()=>{
     inputDirection={ x:-1, y:0 };
-    ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
+    (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
     DirectionChange.play();
 
 });
@@ -182,13 +182,13 @@ leftBtn.addEventListener('click',()=>{
 
 rightBtn.addEventListener('click',()=>{
     inputDirection={ x:1, y:0 };
-    ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
+    (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
     DirectionChange.play();
 
 });
 
 
-    snakeZone.addEventListener('touchstart',(e)=>{
+    document.addEventListener('touchstart',(e)=>{
     // alert("Touch start");
     touch=e.touches[0];
     startX=touch.clientX;
@@ -196,67 +196,105 @@ rightBtn.addEventListener('click',()=>{
 
 
 
+
 })
 
 
-    snakeZone.addEventListener('touchmove',(e)=>{
+document.addEventListener('touchmove',(e)=>{
     // alert("Touch Move");
     touch=e.touches[0];
     DistX=startX-touch.clientX;
     DistY=startY-touch.clientY;
+    (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
+    if(Math.abs(DistX)> Math.abs(DistY))
+        {
+            if(DistX>0)
+                {
+                    // console.log("drag Right");
+                    inputDirection={ x:-1, y:0 };
+                    DirectionChange.play();
+                }
+    
+               else
+                    {
+                        // console.log("drag Left");
+                        inputDirection={ x:1, y:0 };
+                        DirectionChange.play();
+                    }
+    
+        }
+        else {
+            if(DistY>0)
+                {
+                    // console.log("drag Up");
+                    inputDirection={ x:0, y:-1 };
+                    DirectionChange.play();
+                }
+    
+               else
+                    {
+                        // console.log("drag Down");
+                        inputDirection={ x:0, y:1 };
+
+                        DirectionChange.play();
+                    }
+            
+    
+    
+    
+        }
+    
     
 
 
 })
 
 
-    snakeZone.addEventListener('touchend',(e)=>{
-    // alert("Touch End");
-  if(Math.abs(DistX)> Math.abs(DistY))
-    {
-        if(DistX>0)
-            {
-                // console.log("drag Right");
-                inputDirection={ x:-1, y:0 };
-                ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
-                DirectionChange.play();
-            }
+// document.addEventListener('touchend',(e)=>{
+//     // alert("Touch End");
+//   if(Math.abs(DistX)> Math.abs(DistY))
+//     {
+//         if(DistX>0)
+//             {
+//                 // console.log("drag Right");
+//                 inputDirection={ x:-1, y:0 };
+//                 DirectionChange.play();
+//             }
 
-           else
-                {
-                    // console.log("drag Left");
-                    inputDirection={ x:1, y:0 };
-                    ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
-                    DirectionChange.play();
-                }
+//            else
+//                 {
+//                     // console.log("drag Left");
+//                     inputDirection={ x:1, y:0 };
+//                     DirectionChange.play();
+//                 }
 
-    }
+//     }
 
 
-    else {
-        if(DistY>0)
-            {
-                // console.log("drag Up");
-                inputDirection={ x:0, y:-1 };
-                ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
-                DirectionChange.play();
-            }
+//     else {
+//         if(DistY>0)
+//             {
+//                 // console.log("drag Up");
+//                 inputDirection={ x:0, y:-1 };
+//                 ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
+//                 DirectionChange.play();
+//             }
 
-           else
-                {
-                    // console.log("drag Down");
-                    inputDirection={ x:0, y:1 };
-                    ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
-                    DirectionChange.play();
-                }
+//            else
+//                 {
+//                     // console.log("drag Down");
+//                     inputDirection={ x:0, y:1 };
+//                     ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
+//                     DirectionChange.play();
+//                 }
         
 
 
 
-    }
+//     }
 
 
-})
+// })
 
 
 
@@ -292,29 +330,7 @@ function working(ctime){
     hiScore.innerHTML="hiScore : "+highScore;
     BackgroundMusic.play();
    
-// forEach loop can be used here 
-// for(i=0;i<snakeArray.length;i++)
-//     {
-    
-//        if(i==0)
-//         {
-//             snakeHead=document.createElement('div');
-//             snakeHead.style.gridRowStart=snakeArray[i].y;
-//             snakeHead.style.gridColumnStart=snakeArray[i].x;
-//             snakeZone.appendChild(snakeHead);
-//             snakeHead.classList.add('snakeHead');
-            
-//         }
-//         else{
-//             snakeElement=document.createElement('div');
-//             snakeElement.style.gridRowStart=snakeArray[i].y;
-//             snakeElement.style.gridColumnStart=snakeArray[i].x;
-//             snakeZone.appendChild(snakeElement);
-//             snakeElement.classList.add('snakeBody');
-//         }
-      
 
-//     }
 
       //display the food.
       snakeFood=document.createElement('div');
@@ -333,24 +349,7 @@ function working(ctime){
        
 //motion of body of snake
    
-    // for(i=snakeArray.length-2;i>=0;i--)
-    //     {
-    //         snakeArray[i+1].x=snakeArray[i].x;
-    //         snakeArray[i+1].y=snakeArray[i].y;
-    //         // snakeArray[i+1]={...snakeArray[i]};
-          
-
-    //     }
-    //     snakeArray[0].x+=inputDirection.x;
-    //     snakeArray[0].y+=inputDirection.y;
-         // console.log(snakeArray[0].y); 
-
-
-
-
-
-
-         for(i=0;i<snakeArray.length;i++)
+            for(i=0;i<snakeArray.length;i++)
             {
             
                if(i==0)
@@ -429,11 +428,12 @@ function working(ctime){
             speed =5+(snakeArray.length)/3;
                 score++;
                 myScore.innerHTML="myScore : "+score;
-                if(score >= highScore+1)
+                if(score >= highScore)
                     {
                         
                         console.log("yes");
                         highScore=score;
+                        // alert('working');
                     }
             foodEat.play();
             }
