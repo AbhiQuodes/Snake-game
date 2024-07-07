@@ -12,9 +12,15 @@
     min-height:100vh;
     display:flex;
     touch-action: none;
-    background:linear-gradient( 45deg,rgb(15 16 12), rgb(99 90 86));
+    /* background-image: url("https://t3.ftcdn.net/jpg/04/95/83/48/360_F_495834896_84gYm1ukldpg66tdCnGHmxi6pgrVlCTw.jpg"); */
+    background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); 
+     background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    /* background:linear-gradient( 45deg,rgb(15 16 12), rgb(99 90 86)); */
     /* align-items:center; */
     justify-content: center;
+    align-items: center;
   
 }
 
@@ -49,6 +55,7 @@
     border-radius: 5px;
     box-shadow: 2px 3px 5px yellow inset;
     border: 1px solid green;
+    
 }
 .food{
     border-radius:10px;
@@ -91,23 +98,38 @@ h2{
     font-family:'Courier New', Courier, monospace    ;
 }
 
-h3{
+#leader{
     position:absolute;
     display:inline;
-    top:10vh;
-    right:40px;
+    top:8vh;
+    right:15px;
+    width:max-content;
     z-index: 14;
     font-weight: 500;
     font-family: 'Courier New';
-    font-size: 20px;
-    color:rgb(243, 243, 6);
+    /* font-size: 20px; */
+    background-color:rgb(211 214 74);
+    padding: 0px 20px;
+    box-shadow: -2px -2px 5px black;
+     box-sizing: content-box;
+    
     /* color:rgb(226, 216, 204); */
 }
 
+
 #hiScore{
     top:6.5vh;
-    color:rgb(241, 241, 9);
-    right:40px;
+    
+    right:15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-bottom:5px;
+  
+}
+#myScore{
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius: 15px;
+    padding-top:5px;
 }
 
  @media  (max-width: 600px) {
@@ -166,6 +188,7 @@ h3{
     display:grid;
     margin-top:7.5vh;
     border-radius: 15px;
+    backdrop-filter: blur(3px);
     /* background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); */
     /* background: linear-gradient(grey,   #e3536a);  */
     /* background-image: url("https://img.lovepik.com/photo/48010/8637.jpg_wh860.jpg"); */
@@ -174,11 +197,15 @@ h3{
     /* background-repeat: no-repeat;
     background-position:center;
     background-size:cover; */
-    background: linear-gradient(grey,   #e3536a);    box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
+    /* background: linear-gradient(grey,   #e3536a);    */
+    backdrop-filter: blur(2px);
+     box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat( 21,1fr);
     width:98vmin;
-   height:70vh;
+    height:98vmin;
+    background: transparent;
+   /* height:70vh; */
    border:2px solid rgb(16, 1, 0);
 }
 
@@ -214,13 +241,14 @@ h3{
     margin-top:13vh;
     border-radius: 15px;
     /* background-image: url("https://img.lovepik.com/photo/48010/8637.jpg_wh860.jpg"); */
-    /*error
-     background-image: url("https://t3.ftcdn.net/jpg/04/95/83/48/360_F_495834896_84gYm1ukldpg66tdCnGHmxi6pgrVlCTw.jpg"); */
+    /* error */
+     /* background-image: url("https://t3.ftcdn.net/jpg/04/95/83/48/360_F_495834896_84gYm1ukldpg66tdCnGHmxi6pgrVlCTw.jpg"); */
     /* background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); */
-    background: linear-gradient(grey,   #e3536a); 
+    /* background: linear-gradient(grey,   #e3536a);  */
     /* background-repeat: no-repeat;
     background-position:center;
     background-size:cover; */
+    backdrop-filter: blur(2px);
        box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
     grid-template-columns: repeat(25,1fr);
     grid-template-rows: repeat( 21,1fr);
