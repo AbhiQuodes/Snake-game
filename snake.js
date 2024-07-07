@@ -216,7 +216,7 @@ document.addEventListener('touchmove',(e)=>{
 
 document.addEventListener('touchend',(e)=>{
     // alert("Touch End");
-    (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
+   
   if(Math.abs(DistX)> Math.abs(DistY))
     {
         if(DistX>0)
