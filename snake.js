@@ -205,44 +205,8 @@ document.addEventListener('touchmove',(e)=>{
     touch=e.touches[0];
     DistX=startX-touch.clientX;
     DistY=startY-touch.clientY;
-    // (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
-    if(Math.abs(DistX)> Math.abs(DistY))
-        {
-            if(DistX>0)
-                {
-                    // console.log("drag Right");
-                    inputDirection={ x:-1, y:0 };
-                    DirectionChange.play();
-                }
-    
-               else
-                    {
-                        // console.log("drag Left");
-                        inputDirection={ x:1, y:0 };
-                        DirectionChange.play();
-                    }
-    
-        }
-        else {
-            if(DistY>0)
-                {
-                    // console.log("drag Up");
-                    inputDirection={ x:0, y:-1 };
-                    DirectionChange.play();
-                }
-    
-               else
-                    {
-                        // console.log("drag Down");
-                        inputDirection={ x:0, y:1 };
-
-                        DirectionChange.play();
-                    }
-            
     
     
-    
-        }
     
     
 
@@ -250,51 +214,50 @@ document.addEventListener('touchmove',(e)=>{
 })
 
 
-// document.addEventListener('touchend',(e)=>{
-//     // alert("Touch End");
-//   if(Math.abs(DistX)> Math.abs(DistY))
-//     {
-//         if(DistX>0)
-//             {
-//                 // console.log("drag Right");
-//                 inputDirection={ x:-1, y:0 };
-//                 DirectionChange.play();
-//             }
+document.addEventListener('touchend',(e)=>{
+    // alert("Touch End");
+    (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
+  if(Math.abs(DistX)> Math.abs(DistY))
+    {
+        if(DistX>0)
+            {
+                // console.log("drag Right");
+                inputDirection={ x:-1, y:0 };
+                DirectionChange.play();
+            }
 
-//            else
-//                 {
-//                     // console.log("drag Left");
-//                     inputDirection={ x:1, y:0 };
-//                     DirectionChange.play();
-//                 }
+           else
+                {
+                    // console.log("drag Left");
+                    inputDirection={ x:1, y:0 };
+                    DirectionChange.play();
+                }
 
-//     }
+    }
 
 
-//     else {
-//         if(DistY>0)
-//             {
-//                 // console.log("drag Up");
-//                 inputDirection={ x:0, y:-1 };
-//                 ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
-//                 DirectionChange.play();
-//             }
+    else {
+        if(DistY>0)
+            {
+                // console.log("drag Up");
+                inputDirection={ x:0, y:-1 };
+                DirectionChange.play();
+            }
 
-//            else
-//                 {
-//                     // console.log("drag Down");
-//                     inputDirection={ x:0, y:1 };
-//                     ( lastpaintTime) =((lastPaintTime)/1000)-(1/speed);
-//                     DirectionChange.play();
-//                 }
+           else
+                {
+                    // console.log("drag Down");
+                    inputDirection={ x:0, y:1 };
+                    DirectionChange.play();
+                }
         
 
 
 
-//     }
+    }
 
 
-// })
+})
 
 
 

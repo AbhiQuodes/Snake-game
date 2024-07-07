@@ -86,7 +86,7 @@ header{
 
 }
 #slideUp{
-    top:71vh;
+    top:68vh;
     left:47vw;
    
    }
@@ -142,7 +142,7 @@ h2{
      min-height:45px;
       border-radius:20px;
       /* background-color: #e7f03e; */
-      top:78vh;
+      top:75vh;
       left:45vw;
      
    }
@@ -171,22 +171,21 @@ h2{
    } */
    
    #slideDown{
-    top:88vh;
+    top:85vh;
     left:45vw;
    }
    #slideLeft{
-    top:83vh;
+    top:80vh;
     left:33vw;
    }
    #slideRight{
-    top:83vh;
+    top:80vh;
     left:57vw;
    }
 
 
    #snakeZone{
     display:grid;
-    margin-top:7.5vh;
     border-radius: 15px;
     backdrop-filter: blur(3px);
     /* background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); */
@@ -199,14 +198,14 @@ h2{
     background-size:cover; */
     /* background: linear-gradient(grey,   #e3536a);    */
     backdrop-filter: blur(2px);
-     box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
+     box-shadow: 4px 2px 5px rgba(6, 109, 52, 0.413) ;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat( 21,1fr);
     width:98vmin;
-    height:98vmin;
-    background: transparent;
+    height:120vmin;
+     background: transparent;
    /* height:70vh; */
-   border:2px solid rgb(16, 1, 0);
+   border:2px solid rgb(51, 91, 3);
 }
 
 
@@ -215,16 +214,19 @@ h2{
     right:10px;
     top:6px;
     width:40px;
-    height:30px;
+    height:35px;
     background: transparent;
-    border:2px solid rgb(14, 36, 29);
+    backdrop-filter: blur(5px);
+    border:2px solid rgb(14, 15, 1);
     /* background: linear-gradient(rgb(249, 246, 246),   #646161);  */
    /* background: radial-gradient(rgb(6, 244, 165),#fff); */
     /* background: linear-gradient(rgb(0, 255, 72) ,rgb(210, 143, 8)); */
-    color:rgb(251, 250, 250);
+    
+    color:brown;
     /* border:none; */
+    backdrop-filter: blur(5px);
     border-radius:12px;
-    box-shadow:-2px 3px 5px rgb(43, 49, 50) inset;
+    box-shadow:-2px 3px 5px rgb(11, 30, 2) inset;
     
 }
    
@@ -249,7 +251,7 @@ h2{
     background-position:center;
     background-size:cover; */
     backdrop-filter: blur(2px);
-       box-shadow: 4px 2px 5px rgb(33, 13, 13) ;
+       box-shadow: 4px 2px 5px rgb(19, 19, 18) ;
     grid-template-columns: repeat(25,1fr);
     grid-template-rows: repeat( 21,1fr);
     width:98vmin;
