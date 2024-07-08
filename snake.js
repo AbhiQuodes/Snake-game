@@ -218,6 +218,7 @@ rightBtn.addEventListener('click',()=>{
 
     document.addEventListener('touchstart',(e)=>{
     // alert("Touch start");
+    e.preventDefault();
     touch=e.touches[0];
     startX=touch.clientX;
     startY=touch.clientY;
@@ -231,6 +232,7 @@ rightBtn.addEventListener('click',()=>{
 document.addEventListener('touchmove',(e)=>{
     // alert("Touch Move");
     touch=e.touches[0];
+    e.preventDefault();
     DistX=startX-touch.clientX;
     DistY=startY-touch.clientY;
     
@@ -244,6 +246,7 @@ document.addEventListener('touchmove',(e)=>{
 
 document.addEventListener('touchend',(e)=>{
     // alert("Touch End");
+    e.preventDefault();
    
   if(Math.abs(DistX)> Math.abs(DistY))
     {
@@ -252,7 +255,7 @@ document.addEventListener('touchend',(e)=>{
                 // console.log("drag Right");
                 inputDirection={ x:-1, y:0 };
                 DirectionChange.play();
-                touchTrack.innerHTML="Drag right";
+                touchTrack.innerHTML="Drag Left";
             }
 
            else
@@ -260,7 +263,7 @@ document.addEventListener('touchend',(e)=>{
                     // console.log("drag Left");
                     inputDirection={ x:1, y:0 };
                     DirectionChange.play();
-                    touchTrack.innerHTML="Drag left";
+                    touchTrack.innerHTML="Drag Right";
                 }
 
     }
