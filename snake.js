@@ -9,6 +9,7 @@ let downBtn =document.querySelector('#slideDown');
 let leftBtn =document.querySelector('#slideLeft');
 let rightBtn =document.querySelector('#slideRight');
 let containerBox=document.querySelectorAll('.container');
+let touchTrack =document.querySelector('#touchTrack');
 
 
 
@@ -123,8 +124,13 @@ document.addEventListener('keydown',(event)=>{
     {
         case 'ArrowUp':{
             inputDirection={ x:0, y:-1 };
-          ( lastpaintTime) =((lastPaintTime)/1000)-(1);
+            if(touchTrack.innerHTML != 'Drag Up')
+            {
+          ( lastPaintTime) =((lastPaintTime)/1000)-(1);
            DirectionChange.play();
+           touchTrack.innerHTML="Drag Up";
+           window.requestAnimationFrame(working);
+            }
             break;
         }
 
@@ -132,24 +138,39 @@ document.addEventListener('keydown',(event)=>{
 
         case 'ArrowDown':{
             inputDirection={ x:0, y:1 };
-            ( lastpaintTime) =((lastPaintTime)/1000)-(1);
-            DirectionChange.play();
+            if(touchTrack.innerHTML != 'Drag Down')
+                {
+            ( lastPaintTime) =((lastPaintTime)/1000)-(1);
+            touchTrack.innerHTML="Drag Down";
+            DirectionChange.play();  
+            window.requestAnimationFrame(working);
+                }
             break;
         }
 
 
         case 'ArrowLeft':{
             inputDirection={ x:-1, y:0 };
-            ( lastpaintTime) =((lastPaintTime)/1000)-(1);
-            DirectionChange.play();
+            if(touchTrack.innerHTML != 'Drag Left')
+                {
+            ( lastPaintTime) =((lastPaintTime)/1000)-(1);
+            touchTrack.innerHTML="Drag Left";
+            DirectionChange.play();            
+            window.requestAnimationFrame(working);
+                }
         break;
         }
 
         case 'ArrowRight':
             {
                 inputDirection={ x:1, y:0 };
-                ( lastpaintTime) =((lastPaintTime)/1000)-(1);
+                if(touchTrack.innerHTML != 'Drag Right')
+                    {
+                ( lastPaintTime) =((lastPaintTime)/1000)-(1);
+                touchTrack.innerHTML="Drag Right";
                 DirectionChange.play();
+                window.requestAnimationFrame(working);
+                    }
                 break;
             }
     }
@@ -160,30 +181,37 @@ document.addEventListener('keydown',(event)=>{
 
 upBtn.addEventListener('click',()=>{
     inputDirection={ x:0, y:-1 };
-    ( lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
+    ( lastPaintTime) =((lastPaintTime)/1000)-(1);
+    
     DirectionChange.play();
-
+    window.requestAnimationFrame(working);
+ 
 });
 
 downBtn.addEventListener('click',()=>{
     inputDirection={ x:0, y:1 };
-    ( lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
+    ( lastPaintTime) =((lastPaintTime)/1000)-(1);
     DirectionChange.play();
+    window.requestAnimationFrame(working);  
 
 });
 
 leftBtn.addEventListener('click',()=>{
     inputDirection={ x:-1, y:0 };
-    (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
+    (lastPaintTime) =((lastPaintTime)/1000)-1;
     DirectionChange.play();
+    window.requestAnimationFrame(working);
+ 
 
 });
 
 
 rightBtn.addEventListener('click',()=>{
     inputDirection={ x:1, y:0 };
-    (lastPaintTime) =((lastPaintTime)/1000)-(1/speed);
+    (lastPaintTime) =((lastPaintTime)/1000)-(1);
     DirectionChange.play();
+    window.requestAnimationFrame(working);
+   
 
 });
 
@@ -224,6 +252,7 @@ document.addEventListener('touchend',(e)=>{
                 // console.log("drag Right");
                 inputDirection={ x:-1, y:0 };
                 DirectionChange.play();
+                touchTrack.innerHTML="Drag right";
             }
 
            else
@@ -231,6 +260,7 @@ document.addEventListener('touchend',(e)=>{
                     // console.log("drag Left");
                     inputDirection={ x:1, y:0 };
                     DirectionChange.play();
+                    touchTrack.innerHTML="Drag left";
                 }
 
     }
@@ -242,6 +272,7 @@ document.addEventListener('touchend',(e)=>{
                 // console.log("drag Up");
                 inputDirection={ x:0, y:-1 };
                 DirectionChange.play();
+                touchTrack.innerHTML="Drag Up";
             }
 
            else
@@ -249,12 +280,15 @@ document.addEventListener('touchend',(e)=>{
                     // console.log("drag Down");
                     inputDirection={ x:0, y:1 };
                     DirectionChange.play();
+                    touchTrack.innerHTML="Drag  Down";
                 }
         
 
 
 
     }
+    (lastPaintTime) =((lastPaintTime)/1000)-1;
+    window.requestAnimationFrame(working);
 
 
 })

@@ -5,6 +5,7 @@
 
 }
 
+
 .container{
     position: fixed;
     padding:10px;
@@ -29,6 +30,21 @@
     display:none;
 }
 
+#touchTrack{
+    position:absolute;
+    display:inline;
+    width:max-content;
+    top:8vh;
+    left:15px;
+    z-index: 15;
+    font-weight: 500;
+font-family: 'Courier New';
+/* font-size: 20px; */
+background-color:rgb(211 214 74);
+padding: 0px 20px;
+box-shadow: -2px -2px 5px black;
+ box-sizing: content-box;
+}
 #box{
     /* background-color: yellow; */
     grid-row: 2;
@@ -133,6 +149,8 @@ h2{
 }
 
  @media  (max-width: 600px) {
+
+  
  .botton{
     position:       fixed;
     display:inline-block;
