@@ -12,7 +12,7 @@
     width:100vw;
     min-height:100vh;
     display:flex;
-    /* touch-action: none; */
+    touch-action: none;
     /* background-image: url("https://t3.ftcdn.net/jpg/04/95/83/48/360_F_495834896_84gYm1ukldpg66tdCnGHmxi6pgrVlCTw.jpg"); */
     background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); 
      background-repeat: no-repeat;
@@ -54,6 +54,7 @@ box-shadow: -2px -2px 5px black;
   /* background: radial-gradient(rgb(255, 42, 0),black); */
   background-image:url("SnakeHead.png"); 
   background-repeat: no-repeat;
+  touch-action:auto ;
     background-position:center;
     background-size:cover;
   scale:1.5;
@@ -70,6 +71,7 @@ box-shadow: -2px -2px 5px black;
     background-color: rgb(66, 26, 9);
     border-radius: 5px;
     box-shadow: 2px 3px 5px yellow inset;
+    touch-action:auto ;
     border: 1px solid green;
     
 }
