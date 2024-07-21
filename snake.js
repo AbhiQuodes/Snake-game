@@ -264,7 +264,7 @@ document.addEventListener('touchmove',(e)=>{
                                 
                                 DirectionChange.play();
                                 touchTrack.innerHTML='Drag Right';
-                            (lastPaintTime) =((lastPaintTime)/1000)-1;
+                                (lastPaintTime) =((lastPaintTime)/1000)-1;
                             window.requestAnimationFrame(working);
                            
                             }
@@ -284,7 +284,7 @@ document.addEventListener('touchmove',(e)=>{
                             
                             DirectionChange.play();
                             touchTrack.innerHTML='Drag Up';
-                        (lastPaintTime) =((lastPaintTime)/1000)-1;
+                         (lastPaintTime) =((lastPaintTime)/1000)-1;
                         window.requestAnimationFrame(working);
                         
                         }
@@ -314,8 +314,8 @@ document.addEventListener('touchmove',(e)=>{
         }
 
 
-        (lastPaintTime) =((lastPaintTime)/1000)-1;
-        window.requestAnimationFrame(working);
+        // (lastPaintTime) =((lastPaintTime)/1000)-1;
+        // window.requestAnimationFrame(working);
     
     
     
