@@ -247,7 +247,7 @@ document.addEventListener('touchmove',(e)=>{
                         {
                             
                             DirectionChange.play();
-                            touchTrack.innerHTML = 'Drag Left'
+                            touchTrack.innerHTML = 'Drag Left';
                         (lastPaintTime) =((lastPaintTime)/1000)-1;
                         window.requestAnimationFrame(working);
                       
@@ -263,7 +263,7 @@ document.addEventListener('touchmove',(e)=>{
                             {
                                 
                                 DirectionChange.play();
-                                touchTrack.innerHTML="Drag Right";
+                                touchTrack.innerHTML='Drag Right';
                             (lastPaintTime) =((lastPaintTime)/1000)-1;
                             window.requestAnimationFrame(working);
                            
@@ -283,7 +283,7 @@ document.addEventListener('touchmove',(e)=>{
                         {
                             
                             DirectionChange.play();
-                            touchTrack.innerHTML="Drag Up";
+                            touchTrack.innerHTML='Drag Up';
                         (lastPaintTime) =((lastPaintTime)/1000)-1;
                         window.requestAnimationFrame(working);
                         
@@ -299,7 +299,7 @@ document.addEventListener('touchmove',(e)=>{
                             {
                                 
                                 DirectionChange.play();
-                                touchTrack.innerHTML="Drag Down";
+                                touchTrack.innerHTML='Drag Down';
                             (lastPaintTime) =((lastPaintTime)/1000)-1;
                             window.requestAnimationFrame(working);
                           
