@@ -235,7 +235,83 @@ document.addEventListener('touchmove',(e)=>{
     e.preventDefault();
     DistX=startX-touch.clientX;
     DistY=startY-touch.clientY;
+
+    if(Math.abs(DistX)> Math.abs(DistY))
+        {
+            if(DistX>0)
+                {
+                    // console.log("drag Right");
+                    inputDirection={ x:-1, y:0 };
+                    DirectionChange.play();
+                    if(touchTrack.innerHTML != 'Drag Left')
+                        {
+                            
+
+                        (lastPaintTime) =((lastPaintTime)/1000)-1;
+                        window.requestAnimationFrame(working);
+                        touchTrack.innerHTML="Drag  Left";
+                        }
+                }
     
+               else
+                    {
+                        // console.log("drag Left");
+                        inputDirection={ x:1, y:0 };
+                        DirectionChange.play();
+                        if(touchTrack.innerHTML != 'Drag Right')
+                            {
+                                
+
+                            (lastPaintTime) =((lastPaintTime)/1000)-1;
+                            window.requestAnimationFrame(working);
+                            touchTrack.innerHTML="Drag  Right";
+                            }
+                    }
+    
+        }
+    
+    
+        else {
+            if(DistY>0)
+                {
+                    // console.log("drag Up");
+                    inputDirection={ x:0, y:-1 };
+                    DirectionChange.play();
+                    if(touchTrack.innerHTML != 'Drag Up')
+                        {
+                            
+
+                        (lastPaintTime) =((lastPaintTime)/1000)-1;
+                        window.requestAnimationFrame(working);
+                        touchTrack.innerHTML="Drag  Up";
+                        }
+                }
+    
+               else
+                    {
+                        // console.log("drag Down");
+                        inputDirection={ x:0, y:1 };
+                        DirectionChange.play();
+                        if(touchTrack.innerHTML != 'Drag Down')
+                            {
+                                
+
+                            (lastPaintTime) =((lastPaintTime)/1000)-1;
+                            window.requestAnimationFrame(working);
+                            touchTrack.innerHTML="Drag  Down";
+                            }
+
+                      
+                    }
+            
+    
+    
+    
+        }
+
+
+        (lastPaintTime) =((lastPaintTime)/1000)-1;
+        window.requestAnimationFrame(working);
     
     
     
@@ -244,57 +320,57 @@ document.addEventListener('touchmove',(e)=>{
 })
 
 
-document.addEventListener('touchend',(e)=>{
-    // alert("Touch End");
-    e.preventDefault();
+// document.addEventListener('touchend',(e)=>{
+//     // alert("Touch End");
+//     e.preventDefault();
    
-  if(Math.abs(DistX)> Math.abs(DistY))
-    {
-        if(DistX>0)
-            {
-                // console.log("drag Right");
-                inputDirection={ x:-1, y:0 };
-                DirectionChange.play();
-                touchTrack.innerHTML="Drag Left";
-            }
+// //   if(Math.abs(DistX)> Math.abs(DistY))
+// //     {
+// //         if(DistX>0)
+// //             {
+// //                 // console.log("drag Right");
+// //                 inputDirection={ x:-1, y:0 };
+// //                 DirectionChange.play();
+// //                 touchTrack.innerHTML="Drag Left";
+// //             }
 
-           else
-                {
-                    // console.log("drag Left");
-                    inputDirection={ x:1, y:0 };
-                    DirectionChange.play();
-                    touchTrack.innerHTML="Drag Right";
-                }
+// //            else
+// //                 {
+// //                     // console.log("drag Left");
+// //                     inputDirection={ x:1, y:0 };
+// //                     DirectionChange.play();
+// //                     touchTrack.innerHTML="Drag Right";
+// //                 }
 
-    }
+// //     }
 
 
-    else {
-        if(DistY>0)
-            {
-                // console.log("drag Up");
-                inputDirection={ x:0, y:-1 };
-                DirectionChange.play();
-                touchTrack.innerHTML="Drag Up";
-            }
+// //     else {
+// //         if(DistY>0)
+// //             {
+// //                 // console.log("drag Up");
+// //                 inputDirection={ x:0, y:-1 };
+// //                 DirectionChange.play();
+// //                 touchTrack.innerHTML="Drag Up";
+// //             }
 
-           else
-                {
-                    // console.log("drag Down");
-                    inputDirection={ x:0, y:1 };
-                    DirectionChange.play();
-                    touchTrack.innerHTML="Drag  Down";
-                }
+// //            else
+// //                 {
+// //                     // console.log("drag Down");
+// //                     inputDirection={ x:0, y:1 };
+// //                     DirectionChange.play();
+// //                     touchTrack.innerHTML="Drag  Down";
+// //                 }
         
 
 
 
-    }
-    (lastPaintTime) =((lastPaintTime)/1000)-1;
-    window.requestAnimationFrame(working);
+// //     }
+//     (lastPaintTime) =((lastPaintTime)/1000)-1;
+//     window.requestAnimationFrame(working);
 
 
-})
+// })
 
 
 

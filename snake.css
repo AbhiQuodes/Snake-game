@@ -12,7 +12,7 @@
     width:100vw;
     min-height:100vh;
     display:flex;
-    touch-action: none;
+    /* touch-action: none; */
     /* background-image: url("https://t3.ftcdn.net/jpg/04/95/83/48/360_F_495834896_84gYm1ukldpg66tdCnGHmxi6pgrVlCTw.jpg"); */
     background-image: url("https://img.freepik.com/premium-vector/nature-forest-landscape-background_1308-71950.jpg"); 
      background-repeat: no-repeat;
